@@ -1,8 +1,7 @@
 package Spring.Security.Practice.Spring.Security.Practice.Controller;
 
-import Spring.Security.Practice.Spring.Security.Practice.Domain.AppUser;
-import Spring.Security.Practice.Spring.Security.Practice.Repo.AppUserRepo;
-import Spring.Security.Practice.Spring.Security.Practice.Domain.Role;
+import Spring.Security.Practice.Spring.Security.Practice.Model.AppUser;
+import Spring.Security.Practice.Spring.Security.Practice.Model.Role;
 
 import java.util.List;
 
@@ -13,7 +12,7 @@ public interface UserService {
 
     Role saveRole(Role role);
     void addRoleToUser(String username, String roleName);
-    AppUserRepo getUser(String username);
-    List<AppUserRepo> getUsers(); //Return Only Page To User
+    AppUser getUser(String username);
+    List<AppUser> getUsers(); //Return Only Page To User
 
 }

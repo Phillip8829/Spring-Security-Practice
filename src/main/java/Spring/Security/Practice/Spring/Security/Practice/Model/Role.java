@@ -1,4 +1,4 @@
-package Spring.Security.Practice.Spring.Security.Practice.Domain;
+package Spring.Security.Practice.Spring.Security.Practice.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +20,5 @@ public class Role {
 
 
     String name;
-    String Role;
 
 }
