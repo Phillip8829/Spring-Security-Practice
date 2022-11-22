@@ -1,29 +1,33 @@
 package Spring.Security.Practice.Spring.Security.Practice.Controller;
 
+import Spring.Security.Practice.Spring.Security.Practice.Domain.AppUser;
+import Spring.Security.Practice.Spring.Security.Practice.Domain.Role;
 import Spring.Security.Practice.Spring.Security.Practice.Repo.AppUserRepo;
 import Spring.Security.Practice.Spring.Security.Practice.Repo.RoleRepo;
-import Spring.Security.Practice.Spring.Security.Practice.domain.Role;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
-@Service @RequiredArgsConstructor @Transactional @Slf4j
+@Service @Transactional @Slf4j
 public class UserServiceApplication implements UserService {
 
     //Repos
     private final AppUserRepo appUserRepo;
     private final RoleRepo roleRepo;
 
+    public UserServiceApplication(AppUserRepo appUserRepo, RoleRepo roleRepo) {
+        this.appUserRepo = appUserRepo;
+        this.roleRepo = roleRepo;
+    }
 
-   //Don't need constructor because  @RequiredArgsConstructor
+    //Don't need constructor because  @RequiredArgsConstructor
 
 
     @Override
-    public AppUserRepo saveUser(AppUserRepo user) {
-        return appUserRepo.save(user);
+    public AppUser saveUser(AppUser user) {
+     return appUserRepo.save(user);
     }
 
     @Override
