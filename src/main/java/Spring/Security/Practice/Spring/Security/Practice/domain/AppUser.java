@@ -1,4 +1,4 @@
-package Spring.Security.Practice.Spring.Security.Practice.domain;
+package Spring.Security.Practice.Spring.Security.Practice.Domain;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
